@@ -5,37 +5,47 @@ ARCHIVO README.
 git clone https://github.com/fjo24/app-verifarma.git
 
 
-2. Actualizar composer.
+2. Dentro de directorio de app-verifarma actualizar composer.
 
 composer update
 
 
-3. Actualizar archivo ".env", modificando la variable "DB_DATABASE" y agregando la variable "API_KEY_GM" (API_KEY_GM es una KEY de googleMaps creada temporalmente para esta prueba) de la siguiente forma:
+3. Crear archivo ".env", copiando data de ".env.example", seguidamente modificar la variable "DB_DATABASE" y agregar la variable "API_KEY_GM" (API_KEY_GM es una KEY de googleMaps creada temporalmente para esta prueba) de la siguiente forma:
 
 DB_DATABASE=verifarma
 
 API_KEY_GM="AIzaSyAm0hXQL3me1jKMxFG_gagNr2VyAvLpDjc"
 
 
-4. Ejecutar migraciones y seeders. Esto cargara un usuario y algunas farmacias de prueba.
+4. Generar Key de la APP. 
+
+php artisan key:generate
+
+
+5. Ejecutar migraciones y seeders. Esto cargara un usuario y algunas farmacias de prueba.
 
 php artisan migrate --seed
 
 
-5. Usar la documentacion para probar servicios. 
+6. Iniciar aplicacion.
+
+php artisan serve
+
+
+7. Usar la documentacion para probar servicios. 
 
 Link de documentacion:
 - https://documenter.getpostman.com/view/6308521/Uyr7GdZD  
 
 Servicios:
-- Registro.
-- Login.
-- Creacion de farmacia.
-- Obtener farmacia por id.
-- Obtener farmacia mas cercana, según coordenadas dadas.
+- Registro. 
+- Login. Obtenemos token necesario para el resto de los servicios.
+- Creacion de farmacia. Enviar "Authorization bearer token".
+- Obtener farmacia por id. Enviar "Authorization bearer token".
+- Obtener farmacia mas cercana, según coordenadas dadas. Enviar "Authorization bearer token".
 
 
-6. Ejecutar tests.
+8. Ejecutar tests.
 
 En consola:
 
