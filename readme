@@ -19,6 +19,9 @@ php artisan migrate --seed
 
 5. Usar la documentacion para probar servicios. 
 
+Link de documentacion:
+- https://documenter.getpostman.com/view/6308521/Uyr7GdZD  
+
 Servicios:
 - Registro.
 - Login.
