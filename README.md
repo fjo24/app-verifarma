@@ -2,7 +2,7 @@ ARCHIVO README.
 
 1. Clonar proyecto. 
 
-git clone https://github.com/fjo24/app-verifama.git
+git clone https://github.com/fjo24/app-verifarma.git
 
 
 2. Actualizar composer.
